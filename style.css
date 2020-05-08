@@ -1,12 +1,13 @@
+html {
+    background: url(simflyingclub.jpg) no-repeat center fixed; 
+    background-size: cover;
+}
+
 body {
     height:850px;
 }
 
 div {
-    background-image: url('https://accountegy.github.io/simflyingclub.jpg'); 
-    background-repeat:no-repeat; 
-    width: auto; 
-    height: 100%; 
     padding-left: 20px; 
     padding-top: 10px;
 }
