@@ -140,3 +140,7 @@ img.slrelogo {
     width: 310px;
     height: auto;
 }
+
+li {
+    padding: 10px;
+}
