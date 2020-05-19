@@ -1,183 +1,127 @@
-<!DOCTYPE html>
-<html>
-  <!--Begin Copy-->
-    <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Simply Lowcountry</title>
-    <link rel="canonical" href="https://simplylowcountry.com">
-    <meta property="og:site_name" content="Simply Lowcountry">
-    <meta property="og:title" content="Simply Lowcountry">
-    <meta property="og:url" content="http://simplylowcountry.com">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="Simply Lowcountry is a top real esate team in Charleston, SC.">
-    <meta property="og:image" content="">
-    <meta property="og:image:width" content="1500">
-    <meta property="og:image:height" content="984">
-    <meta itemprop="name" content="Simply Lowcountry">
-    <meta itemprop="url" content="https://simplylowcountry.com">
-    <meta itemprop="description" content="Simply Lowcountry is a top real estate team in Charleston, SC.">
-    <meta itemprop="thumbnailUrl" content="https://simplylowcountry.com/landscape-pictures/simplylowcountry.jpg">
-    <link rel="image_src" href="https://simplylowcountry.com/landscape-pictures/simplylowcountry.jpg">
-    <meta itemprop="image" content="https://simplylowcountry.com/landscape-pictures/simplylowcountry.jpg">
-    <meta name="twitter:title" content="Simply Lowcountry">
-    <meta name="twitter:image" content="https://simplylowcountry.com/landscape-pictures/simplylowcountry.jpg">
-    <meta name="twitter:url" content="https://simplylowcountry.com">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:description" content="Simply Lowcountry is a top real estate team in Charleston, SC.">
-    <meta name="description" content="Simply Lowcountry is a top real estate team in Charleston, SC.">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,400,500">
-    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700">  
-    </head>
-    <body class="mdc-typography">
-        <div class="mdc-layout-grid title">
-            <div class="mdc-layout-grid__inner">
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 title">
-                    <h2 class="mdc-typography--headline2 title">Simply Lowcountry</h2>
+<!--Begin Nav-->
+<div id="mySidenav" class="sidenav">
+    <div class="mdc-layout-grid mdc-layout-grid--align-center">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="mdc-layout-grid__cell">
+            <div class="mdc-tab-bar" role="tablist">
+                <div class="mdc-tab-scroller">
+                    <div class="mdc-tab-scroller__scroll-area">
+                        <div class="mdc-tab-scroller__scroll-content">
+                            <button class="mdc-tab mdc-tab" role="tab" aria-selected="false" tabindex="-1" onclick="window.location.href = 'listings.html';">
+                                <span class="mdc-tab__content">
+                                    <span class="mdc-tab__icon material-icons" aria-hidden="true">house</span>
+                                    <span class="mdc-tab__text-label">Listings</span>
+                                </span>
+                                <span class="mdc-tab-indicator">
+                                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                </span>
+                                <span class="mdc-tab__ripple"></span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="mdc-layout-grid mdc-layout-grid--align-center main-nav">
-            <div class="mdc-layout-grid__inner">
-                <div class="mdc-layout-grid__cell">
-                    <div class="mdc-tab-bar" role="tablist">
-                        <div class="mdc-tab-scroller">
-                            <div class="mdc-tab-scroller__scroll-area">
-                                <div class="mdc-tab-scroller__scroll-content">
-                                    <a class="menulink" href="listings.html">
-                                        <button class="mdc-tab mdc-tab mdc-tab--active" role="tab" aria-selected="false" tabindex="-1">
-                                            <span class="mdc-tab__content">
-                                                <span class="mdc-tab__icon material-icons" aria-hidden="true">house</span>
-                                                <span class="mdc-tab__text-label">Listings</span>
-                                            </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                            </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
+        <div class="mdc-layout-grid__cell">
+            <div class="mdc-tab-bar" role="tablist">
+                <div class="mdc-tab-scroller">
+                    <div class="mdc-tab-scroller__scroll-area">
+                        <div class="mdc-tab-scroller__scroll-content">
+                            <button class="mdc-tab mdc-tab" role="tab" aria-selected="true" tabindex="0" onclick="window.location.href = 'stats.html';">
+                                <span class="mdc-tab__content">
+                                    <span class="mdc-tab__icon material-icons" aria-hidden="true">insert_chart</span>
+                                    <span class="mdc-tab__text-label">stats</span>
+                                </span>
+                                <span class="mdc-tab-indicator">
+                                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                </span>
+                                <span class="mdc-tab__ripple"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="mdc-layout-grid__cell">
-                    <div class="mdc-tab-bar" role="tablist">
-                        <div class="mdc-tab-scroller">
-                            <div class="mdc-tab-scroller__scroll-area">
-                                <div class="mdc-tab-scroller__scroll-content">
-                                    <a class="menulink" href="stats.html">
-                                        <button class="mdc-tab mdc-tab" role="tab" aria-selected="true" tabindex="0">
-                                            <span class="mdc-tab__content">
-                                                <span class="mdc-tab__icon material-icons" aria-hidden="true">insert_chart</span>
-                                                <span class="mdc-tab__text-label">stats</span>
-                                            </span>
-                                            <span class="mdc-tab-indicator">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                            </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
+            </div>
+        </div>
+        <div class="mdc-layout-grid__cell">
+            <div class="mdc-tab-bar" role="tablist">
+                <div class="mdc-tab-scroller">
+                    <div class="mdc-tab-scroller__scroll-area">
+                        <div class="mdc-tab-scroller__scroll-content">
+                            <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0" onclick="window.location.href = 'blog.html';">
+                                <span class="mdc-tab__content">
+                                    <span class="mdc-tab__icon material-icons" aria-hidden="true">favorites</span>
+                                    <span class="mdc-tab__text-label">Blog</span>
+                                </span>
+                                <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                </span>
+                                <span class="mdc-tab__ripple"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="mdc-layout-grid__cell">
-                    <div class="mdc-tab-bar" role="tablist">
-                        <div class="mdc-tab-scroller">
-                            <div class="mdc-tab-scroller__scroll-area">
-                                <div class="mdc-tab-scroller__scroll-content">
-                                    <a class="menulink" href="blog.html">
-                                        <button class="mdc-tab mdc-tab" role="tab" aria-selected="true" tabindex="0">
-                                            <span class="mdc-tab__content">
-                                                <span class="mdc-tab__icon material-icons" aria-hidden="true">favorites</span>
-                                                <span class="mdc-tab__text-label">Blog</span>
-                                            </span>
-                                            <span class="mdc-tab-indicator">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                            </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
+            </div>
+        </div>
+        <div class="mdc-layout-grid__cell">
+            <div class="mdc-tab-bar" role="tablist">
+                <div class="mdc-tab-scroller">
+                    <div class="mdc-tab-scroller__scroll-area">
+                        <div class="mdc-tab-scroller__scroll-content">
+                            <button class="mdc-tab mdc-tab" role="tab" aria-selected="true" tabindex="0" onclick="window.location.href = 'https://lp.constantcontactpages.com/su/9oqNbLP';">
+                                <span class="mdc-tab__content">
+                                    <span class="mdc-tab__icon material-icons" aria-hidden="true">update</span>
+                                    <span class="mdc-tab__text-label">newsletter</span>
+                                </span>
+                                <span class="mdc-tab-indicator">
+                                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                </span>
+                                <span class="mdc-tab__ripple"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="mdc-layout-grid__cell">
-                    <div class="mdc-tab-bar" role="tablist">
-                        <div class="mdc-tab-scroller">
-                            <div class="mdc-tab-scroller__scroll-area">
-                                <div class="mdc-tab-scroller__scroll-content">
-                                    <a class="menulink" href="https://lp.constantcontactpages.com/su/9oqNbLP">
-                                        <button class="mdc-tab mdc-tab" role="tab" aria-selected="true" tabindex="0">
-                                            <span class="mdc-tab__content">
-                                                <span class="mdc-tab__icon material-icons" aria-hidden="true">update</span>
-                                                <span class="mdc-tab__text-label">newsletter</span>
-                                            </span>
-                                            <span class="mdc-tab-indicator">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                            </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
+            </div>
+        </div>
+        <div class="mdc-layout-grid__cell">
+            <div class="mdc-tab-bar" role="tablist">
+                <div class="mdc-tab-scroller">
+                    <div class="mdc-tab-scroller__scroll-area">
+                        <div class="mdc-tab-scroller__scroll-content">
+                            <button class="mdc-tab mdc-tab" role="tab" aria-selected="true" tabindex="0" onclick="window.location.href = 'https://instagram.com/simplylowcountry';">
+                                <span class="mdc-tab__content">
+                                    <span class="mdc-tab__icon material-icons" aria-hidden="true">camera_alt</span>
+                                    <span class="mdc-tab__text-label">instagram</span>
+                                </span>
+                                <span class="mdc-tab-indicator">
+                                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                </span>
+                                <span class="mdc-tab__ripple"></span>
+                            </button>  
                         </div>
                     </div>
                 </div>
-                <div class="mdc-layout-grid__cell">
-                    <div class="mdc-tab-bar" role="tablist">
-                        <div class="mdc-tab-scroller">
-                            <div class="mdc-tab-scroller__scroll-area">
-                                <div class="mdc-tab-scroller__scroll-content">
-                                <a class="menulink" href="https://instagram.com/simplylowcountry">
-                                    <button class="mdc-tab mdc-tab" role="tab" aria-selected="true" tabindex="0">
-                                        <span class="mdc-tab__content">
-                                            <span class="mdc-tab__icon material-icons" aria-hidden="true">camera_alt</span>
-                                            <span class="mdc-tab__text-label">instagram</span>
-                                        </span>
-                                        <span class="mdc-tab-indicator">
-                                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                        </span>
-                                        <span class="mdc-tab__ripple"></span>
-                                    </button>
-                                    </a>
-                                </div>
-                            </div>
+            </div>
+        </div>
+        <div class="mdc-layout-grid__cell">
+            <div class="mdc-tab-bar" role="tablist">
+                <div class="mdc-tab-scroller">
+                    <div class="mdc-tab-scroller__scroll-area">
+                        <div class="mdc-tab-scroller__scroll-content">
+                            <button class="mdc-tab" role="tab" aria-selected="true" tabindex="0" onclick="window.location.href = 'index.html';">
+                                <span class="mdc-tab__content">
+                                    <span class="mdc-tab__icon material-icons" aria-hidden="true">help_outline</span>
+                                    <span class="mdc-tab__text-label">about</span>
+                                </span>
+                                <span class="mdc-tab-indicator">
+                                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                </span>
+                                <span class="mdc-tab__ripple"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="mdc-layout-grid__cell">
-                    <div class="mdc-tab-bar" role="tablist">
-                        <div class="mdc-tab-scroller">
-                            <div class="mdc-tab-scroller__scroll-area">
-                                <div class="mdc-tab-scroller__scroll-content">
-                                    <a class="menulink" href="index.html">
-                                        <button class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
-                                            <span class="mdc-tab__content">
-                                                <span class="mdc-tab__icon material-icons" aria-hidden="true">help_outline</span>
-                                                <span class="mdc-tab__text-label">about</span>
-                                            </span>
-                                            <span class="mdc-tab-indicator">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                            </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>  
-        </div> 
-    <!-- End Copy -->                                   
-    </body>
-</html>
+            </div>
+        </div>  
+    </div> 
+</div>
+<!--End Nav-->
