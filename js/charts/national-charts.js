@@ -22,22 +22,22 @@ google.charts.load('current', {'packages':['bar']});
       }
 
       function Query3() {
-        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1PduKVlfWBPTCRoHJ5aBmsoDqREb3_7yHww30b3Ftb-0/gviz/tq?gid=1943412440&headers=1&range=A1:C4');
+        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1PduKVlfWBPTCRoHJ5aBmsoDqREb3_7yHww30b3Ftb-0/gviz/tq?gid=1453905250&headers=1&range=A1:C4');
         query.send(handleQueryResponse3);
       }
 
       function Query4() {
-        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1PduKVlfWBPTCRoHJ5aBmsoDqREb3_7yHww30b3Ftb-0/gviz/tq?gid=0&headers=1&range=A1:C4');
+        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1PduKVlfWBPTCRoHJ5aBmsoDqREb3_7yHww30b3Ftb-0/gviz/tq?gid=346179718&headers=1&range=A1:C4');
         query.send(handleQueryResponse4);
       }
 
       function Query5() {
-        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1PduKVlfWBPTCRoHJ5aBmsoDqREb3_7yHww30b3Ftb-0/gviz/tq?gid=1943412440&headers=1&range=A1:C4');
+        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1PduKVlfWBPTCRoHJ5aBmsoDqREb3_7yHww30b3Ftb-0/gviz/tq?gid=1615102264&headers=1&range=A1:C4');
         query.send(handleQueryResponse5);
       }
 
       function Query6() {
-        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1PduKVlfWBPTCRoHJ5aBmsoDqREb3_7yHww30b3Ftb-0/gviz/tq?gid=0&headers=1&range=A1:C4');
+        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1PduKVlfWBPTCRoHJ5aBmsoDqREb3_7yHww30b3Ftb-0/gviz/tq?gid=301240689&headers=1&range=A1:C4');
         query.send(handleQueryResponse6);
       }
 
