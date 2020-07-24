@@ -141,8 +141,8 @@ google.charts.load('current', {'packages':['bar']});
       function drawChart3(){
         var options = {
           chart: {
-            title: 'Interest Rates',
-            subtitle: '30 year fixed interest rates: 2019 vs 2020',
+            title: 'Median National Home Price',
+            subtitle: 'Median national home price: 2019 vs 2020',
           },
           series: {
             0: { color: '#9ab5a5' }, // Bind series 0 to an axis named 'distance'.
@@ -158,8 +158,8 @@ google.charts.load('current', {'packages':['bar']});
       function drawChart4(){
         var options = {
           chart: {
-            title: 'Existing Home Sales',
-            subtitle: 'Existing Homes Sold (Millions): 2019 vs 2020',
+            title: 'National Housing Inventory',
+            subtitle: 'Number of homes for sale (millions): 2019 vs 2020',
           },
           series: {
             0: { color: '#9ab5a5' }, // Bind series 0 to an axis named 'distance'.
@@ -174,8 +174,8 @@ google.charts.load('current', {'packages':['bar']});
       function drawChart5(){
         var options = {
           chart: {
-            title: 'Interest Rates',
-            subtitle: '30 year fixed interest rates: 2019 vs 2020',
+            title: 'New Home Starts',
+            subtitle: 'Number of new homes started (Thousands): 2019 vs 2020',
           },
           series: {
             0: { color: '#9ab5a5' }, // Bind series 0 to an axis named 'distance'.
@@ -191,8 +191,8 @@ google.charts.load('current', {'packages':['bar']});
       function drawChart6(){
         var options = {
           chart: {
-            title: 'Existing Home Sales',
-            subtitle: 'Existing Homes Sold (Millions): 2019 vs 2020',
+            title: 'New Home Completions',
+            subtitle: 'Number of new homes completed (Thousands): 2019 vs 2020',
           },
           series: {
             0: { color: '#9ab5a5' }, // Bind series 0 to an axis named 'distance'.
