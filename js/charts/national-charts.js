@@ -27,12 +27,12 @@ google.charts.load('current', {'packages':['bar']});
       }
 
       function Query4() {
-        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1PduKVlfWBPTCRoHJ5aBmsoDqREb3_7yHww30b3Ftb-0/gviz/tq?gid=346179718&headers=1&range=A1:C4');
+        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1PduKVlfWBPTCRoHJ5aBmsoDqREb3_7yHww30b3Ftb-0/gviz/tq?gid=1615102264&headers=1&range=A1:C4');
         query.send(handleQueryResponse4);
       }
 
       function Query5() {
-        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1PduKVlfWBPTCRoHJ5aBmsoDqREb3_7yHww30b3Ftb-0/gviz/tq?gid=1615102264&headers=1&range=A1:C4');
+        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1PduKVlfWBPTCRoHJ5aBmsoDqREb3_7yHww30b3Ftb-0/gviz/tq?gid=346179718&headers=1&range=A1:C4');
         query.send(handleQueryResponse5);
       }
 
@@ -126,7 +126,7 @@ google.charts.load('current', {'packages':['bar']});
         var options = {
           chart: {
             title: 'Existing Home Sales',
-            subtitle: 'Existing Homes Sold (Millions): 2019 vs 2020',
+            subtitle: 'Existing homes sold (millions): 2019 vs 2020',
           },
           series: {
             0: { color: '#9ab5a5' }, // Bind series 0 to an axis named 'distance'.
@@ -175,7 +175,7 @@ google.charts.load('current', {'packages':['bar']});
         var options = {
           chart: {
             title: 'New Home Starts',
-            subtitle: 'Number of new homes started (Thousands): 2019 vs 2020',
+            subtitle: 'Number of new homes started (millions): 2019 vs 2020',
           },
           series: {
             0: { color: '#9ab5a5' }, // Bind series 0 to an axis named 'distance'.
@@ -192,7 +192,7 @@ google.charts.load('current', {'packages':['bar']});
         var options = {
           chart: {
             title: 'New Home Completions',
-            subtitle: 'Number of new homes completed (Thousands): 2019 vs 2020',
+            subtitle: 'Number of new homes completed (millions): 2019 vs 2020',
           },
           series: {
             0: { color: '#9ab5a5' }, // Bind series 0 to an axis named 'distance'.
