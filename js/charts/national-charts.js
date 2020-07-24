@@ -4,15 +4,24 @@ var data2;
 google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(Query1);
       google.charts.setOnLoadCallback(Query2);
+      google.charts.setOnLoadCallback(Query3);
+      google.charts.setOnLoadCallback(Query4);
+      google.charts.setOnLoadCallback(Query5);
+      google.charts.setOnLoadCallback(Query6);
       
       
 
       function Query1() {
           var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1PduKVlfWBPTCRoHJ5aBmsoDqREb3_7yHww30b3Ftb-0/gviz/tq?gid=1943412440&headers=1&range=A1:C4');
-          query.send(handleQueryResponse);
+          query.send(handleQueryResponse1);
       }
+
+      function Query2() {
+        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1PduKVlfWBPTCRoHJ5aBmsoDqREb3_7yHww30b3Ftb-0/gviz/tq?gid=0&headers=1&range=A1:C4');
+        query.send(handleQueryResponse2);
+    }
   
-      function handleQueryResponse(response) {
+      function handleQueryResponse1(response) {
         if (response.isError()) {
           alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
           return;
@@ -22,6 +31,17 @@ google.charts.load('current', {'packages':['bar']});
         drawChart1();
 
         };
+
+        function handleQueryResponse2(response) {
+          if (response.isError()) {
+            alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+            return;
+          }
+    
+          data2 = response.getDataTable();
+          drawChart2();
+    
+          };
 
       function drawChart1(){
         var options = {
@@ -39,23 +59,7 @@ google.charts.load('current', {'packages':['bar']});
         chart.draw(data1, google.charts.Bar.convertOptions(options));
 
       }
-
-      function Query2() {
-        var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1PduKVlfWBPTCRoHJ5aBmsoDqREb3_7yHww30b3Ftb-0/gviz/tq?gid=0&headers=1&range=A1:C4');
-        query.send(handleQueryResponse2);
-    }
-
-    function handleQueryResponse2(response) {
-      if (response.isError()) {
-        alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
-        return;
-      }
-
-      data2 = response.getDataTable();
-      drawChart2();
-
-      };
-
+      
     function drawChart2(){
       var options = {
         chart: {
