@@ -1,3 +1,6 @@
+var table1;
+var table2;
+
 google.charts.load('current', {'packages':['table']});
       google.charts.setOnLoadCallback(drawTable);
       google.charts.setOnLoadCallback(drawTable2);
@@ -15,24 +18,45 @@ google.charts.load('current', {'packages':['bar']});
 
 
 
-      function drawTable() {
+      function drawTable1() {
 
   
         var query = new google.visualization.Query(
             'https://docs.google.com/spreadsheets/d/1nm9iOmhZnO70o5Nj1wzyzqqgdlD9qeoUaD8eMzi6blY/gviz/tq?range=A1:I23');
-        query.send(handleQueryResponse);
+        query.send(handleQueryResponse1);
       }
   
-      function handleQueryResponse(response) {
+      function handleQueryResponse1(response) {
         if (response.isError()) {
           alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
           return;
         }
 
         var cssClassNames = {headerRow: 'mdc-data-table__header-row', tableRow: 'mdc-data-table__row', oddTableRow: 'mdc-data-table__row', selectedTableRow: 'mdc-data-table__row', hoverTableRow: 'mdc-data-table__row', headerCell: 'mdc-data-table__header-cell', tableCell: 'mdc-data-table__cell'};
-        var data = response.getDataTable();
-        var table = new google.visualization.Table(document.getElementById('table_div'));
-        table.draw(data,{showRowNumber: false, width: '100%', height: '100%', cssClassNames: cssClassNames});
+        table1 = response.getDataTable();
+        var table = new google.visualization.Table(document.getElementById('table_div_1'));
+        table.draw(table1,{showRowNumber: false, width: '100%', height: '100%', cssClassNames: cssClassNames});
+        
+      }
+
+      function drawTable2() {
+
+  
+        var query = new google.visualization.Query(
+            'https://docs.google.com/spreadsheets/d/1nm9iOmhZnO70o5Nj1wzyzqqgdlD9qeoUaD8eMzi6blY/gviz/tq?range=A1:I23');
+        query.send(handleQueryResponse2);
+      }
+  
+      function handleQueryResponse2(response) {
+        if (response.isError()) {
+          alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+          return;
+        }
+
+        var cssClassNames = {headerRow: 'mdc-data-table__header-row', tableRow: 'mdc-data-table__row', oddTableRow: 'mdc-data-table__row', selectedTableRow: 'mdc-data-table__row', hoverTableRow: 'mdc-data-table__row', headerCell: 'mdc-data-table__header-cell', tableCell: 'mdc-data-table__cell'};
+        table2 = response.getDataTable();
+        var table = new google.visualization.Table(document.getElementById('table_div_2'));
+        table.draw(table2,{showRowNumber: false, width: '100%', height: '100%', cssClassNames: cssClassNames});
         
       }
 
@@ -133,25 +157,4 @@ google.charts.load('current', {'packages':['bar']});
         var chart = new google.charts.Bar(document.getElementById('columnchart_material_4'));
 
         chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-
-      function drawTable2() {
-        var cssClassNames = {headerRow: 'mdc-data-table__header-row', tableRow: 'mdc-data-table__row', oddTableRow: 'mdc-data-table__row', selectedTableRow: 'mdc-data-table__row', hoverTableRow: 'mdc-data-table__row', headerCell: 'mdc-data-table__header-cell', tableCell: 'mdc-data-table__cell'};
-        
-        var data = new google.visualization.DataTable();
-        
-        data.addColumn('string', 'Address');
-        data.addColumn('number', 'Price');
-        data.addColumn('number', 'Size');
-        data.addColumn('number', 'Price/Size');
-        data.addColumn('number', 'Beds');
-        data.addColumn('number', 'Baths');
-        data.addColumn('number', 'Days on Market');
-        data.addRows([
-          ['1490 Hindman Ave',{v: 10000, f: '$10,000'},{v: 10000},{v: 5, f: '$5'},{v: 5},{v: 2}, {v: 100} ]
-        ]);
-
-        var table = new google.visualization.Table(document.getElementById('table_div_2'));
-
-        table.draw(data,{showRowNumber: false, width: '100%', height: '100%', cssClassNames: cssClassNames});
       }
