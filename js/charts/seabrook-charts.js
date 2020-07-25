@@ -2,7 +2,7 @@ var table1;
 var table2;
 
 google.charts.load('current', {'packages':['table']});
-      google.charts.setOnLoadCallback(drawTable);
+      google.charts.setOnLoadCallback(drawTable1);
       google.charts.setOnLoadCallback(drawTable2);
 google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawChart1);
