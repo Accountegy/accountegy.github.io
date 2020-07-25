@@ -1,3 +1,9 @@
+var table1;
+var table2;
+
+google.charts.load('current', {'packages':['table']});
+      google.charts.setOnLoadCallback(drawTable1);
+      google.charts.setOnLoadCallback(drawTable2);
 google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawChart1);
       google.charts.setOnLoadCallback(drawChart2);
@@ -8,12 +14,60 @@ google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawChart7);
       google.charts.setOnLoadCallback(drawChart8);
 
+
+
+
+
+      function drawTable1() {
+
+  
+        var query = new google.visualization.Query(
+            'https://docs.google.com/spreadsheets/d/1nm9iOmhZnO70o5Nj1wzyzqqgdlD9qeoUaD8eMzi6blY/gviz/tq?range=A1:I23');
+        query.send(handleQueryResponse1);
+      }
+  
+      function handleQueryResponse1(response) {
+        if (response.isError()) {
+          alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+          return;
+        }
+
+        var cssClassNames = {headerRow: 'mdc-data-table__header-row', tableRow: 'mdc-data-table__row', oddTableRow: 'mdc-data-table__row', selectedTableRow: 'mdc-data-table__row', hoverTableRow: 'mdc-data-table__row', headerCell: 'mdc-data-table__header-cell', tableCell: 'mdc-data-table__cell'};
+        table1 = response.getDataTable();
+        var table = new google.visualization.Table(document.getElementById('table_div_1'));
+        table.draw(table1,{showRowNumber: false, width: '100%', height: '100%', cssClassNames: cssClassNames});
+        
+      }
+
+      function drawTable2() {
+
+  
+        var query = new google.visualization.Query(
+            'https://docs.google.com/spreadsheets/d/1nm9iOmhZnO70o5Nj1wzyzqqgdlD9qeoUaD8eMzi6blY/gviz/tq?range=A1:I23');
+        query.send(handleQueryResponse2);
+      }
+  
+      function handleQueryResponse2(response) {
+        if (response.isError()) {
+          alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+          return;
+        }
+
+        var cssClassNames = {headerRow: 'mdc-data-table__header-row', tableRow: 'mdc-data-table__row', oddTableRow: 'mdc-data-table__row', selectedTableRow: 'mdc-data-table__row', hoverTableRow: 'mdc-data-table__row', headerCell: 'mdc-data-table__header-cell', tableCell: 'mdc-data-table__cell'};
+        table2 = response.getDataTable();
+        var table = new google.visualization.Table(document.getElementById('table_div_2'));
+        table.draw(table2,{showRowNumber: false, width: '100%', height: '100%', cssClassNames: cssClassNames});
+        
+      }
+
+      
+
       function drawChart1() {
         var data = google.visualization.arrayToDataTable([
           ['Month', '2019', '2020'],
-          ['Jan', 9, 6],
-          ['Feb', 1, 5],
-          ['Mar', 3, 3]
+          ['Jan', 6, 6,],
+          ['Feb', 7, 13],
+          ['Mar', 14, 29]
         ]);
         
         var options = {
@@ -36,9 +90,9 @@ google.charts.load('current', {'packages':['bar']});
       function drawChart2() {
         var data = google.visualization.arrayToDataTable([
           ['Month', '2019', '2020'],
-          ['Apr', 9, 6],
-          ['May', 13, 13],
-          ['Jun', 6, 20]
+          ['Apr', 18, 12],
+          ['May', 24, 11],
+          ['Jun', 18, 22]
         ]);
 
         var options = {
@@ -60,9 +114,9 @@ google.charts.load('current', {'packages':['bar']});
       function drawChart3() {
         var data = google.visualization.arrayToDataTable([
           ['Month', '2019', '2020'],
-          ['Jan', 109, 109],
-          ['Feb', 118, 118],
-          ['Mar', 129, 118]
+          ['Jan', 156, 135],
+          ['Feb', 162, 130],
+          ['Mar', 177, 138]
         ]);
 
         var options = {
@@ -84,9 +138,9 @@ google.charts.load('current', {'packages':['bar']});
       function drawChart4() {
         var data = google.visualization.arrayToDataTable([
           ['Month', '2019', '2020'],
-          ['Apr', 142, 106],
-          ['May', 143, 102],
-          ['Jun', 151, 95]
+          ['Apr', 177, 129],
+          ['May', 182, 112],
+          ['Jun', 179, 82]
         ]);
 
         var options = {
